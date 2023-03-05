@@ -37,7 +37,7 @@ final class ChatGPTisGodAppTests: XCTestCase {
     "created":1678014752,
     "model":"text-davinci-003",
     "choices":[{
-            "text":"\n\n😊",
+            "text":"\\n\\n😊",
             "index":0,
             "logprobs":null,
             "finish_reason":"stop"
