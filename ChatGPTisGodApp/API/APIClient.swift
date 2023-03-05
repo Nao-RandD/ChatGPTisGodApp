@@ -10,6 +10,8 @@ import Foundation
 enum APIError: Error {
     case responseError
     case decordError
+    case urlSessionError
+    case other
 }
 
 final class APIClient {
@@ -30,11 +32,11 @@ final class APIClient {
             let (data, response) = try await URLSession.shared.data(for: urlRequest)
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return .failure(.responseError) }
 
-            let responseData = try decoder.decode(V.self, from: data)
+            guard let responseData = try? decoder.decode(V.self, from: data) else { return .failure(.decordError) }
             return .success(responseData)
         } catch let error {
             print(error.localizedDescription)
-            return .failure(.decordError)
+            return .failure(.urlSessionError)
         }
     }
 }
