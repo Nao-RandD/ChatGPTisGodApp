@@ -9,28 +9,48 @@ import XCTest
 @testable import ChatGPTisGodApp
 
 final class ChatGPTisGodAppTests: XCTestCase {
+    func testExample() async throws {
+        let body = OpenAICompletionRequestData(model: "text-davinci-003",
+                                               prompt: "Give me random emoji",
+                                               maxTokens: 7,
+                                               temperature: 0)
+        let encoder = JSONEncoder()
+        let data = try encoder.encode(body)
+        let request = OpenAIRequest(data: data)
+        let result = await APIClient.request(request)
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        switch result {
+        case .success(let response):
+            print(response)
+            XCTAssertEqual(true, true)
+        case .failure(let error):
+            print(error)
+            XCTAssertEqual(true, false)
         }
     }
 
+    func testDecord() throws {
+        let json = """
+{
+    "id":"cmpl-6qga0wwBlXj3U6LffQ6G32TrJq6kI",
+    "object":"text_completion",
+    "created":1678014752,
+    "model":"text-davinci-003",
+    "choices":[{
+            "text":"\n\n😊",
+            "index":0,
+            "logprobs":null,
+            "finish_reason":"stop"
+        }],
+    "usage":{
+        "prompt_tokens":4,
+        "completion_tokens":4,
+        "total_tokens":8
+        }
+}
+""".data(using: .utf8)!
+        let decoder = JSONDecoder()
+        let openAICompletion = try decoder.decode(OpenAICompletion.self, from: json)
+        XCTAssertEqual(0, openAICompletion.choices[0].index)
+    }
 }
