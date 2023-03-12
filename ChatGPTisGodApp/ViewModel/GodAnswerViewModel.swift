@@ -18,7 +18,7 @@ final class GodAnswerViewModel: ObservableObject {
 
     func requestToGod(input: String) {
         Task {
-            let validateText = "\(input)、という内容を`150文字以内で回答してもらいたい"
+            let validateText = "\(input)、という内容を一文で端的に回答して"
             await request(input: validateText)
         }
     }
@@ -38,11 +38,18 @@ final class GodAnswerViewModel: ObservableObject {
             case .success(let response):
                 print(response)
                 Task { @MainActor in
-                    self.state = .complete(.success(response.choices[0].text))
+                    var removeText = "\n\n"
+                    var answer = response.choices[0].text
+                    answer = answer.removeBefore(target: removeText)
+                    let validate: Set<Character> = ["\"", "\n"]
+                    answer.removeAll(where: { validate.contains($0) })
+                    self.state = .complete(.success(answer))
                 }
             case .failure(let error):
                 print(error)
-                state = .complete(.failure(error))
+                Task { @MainActor in
+                    self.state = .complete(.failure(error))
+                }
             }
         } catch {
             state = .complete(.failure(error))
