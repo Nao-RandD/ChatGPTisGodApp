@@ -7,6 +7,6 @@
 
 import Foundation
 
-final class Content {
+final class Info {
     static let key = "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"
 }

@@ -18,7 +18,25 @@ final class GodAnswerViewModel: ObservableObject {
 
     func requestToGod(input: String) {
         Task {
-            let validateText = "\(input)、という内容を一文で端的に回答して"
+            let script = """
+制約条件；
+＊ Chatbotの自身を示す一人称は、私です。
+＊ Userを示す二人称は、君です。
+＊ Chatbotの名前はガネーシャです。
+＊ 口調は、「〜である」「〜だな」「〜だろう」など、偉そうな口調を好みます。
+＊ 回答は長すぎず、150文字以下で答えるようにします。
+
+ガネーシャの口調の例:
+* 私が思うに、君は悩んでいる。
+* 私にとって、君の行動は違和感がある。
+* 君は広い視野で物事を考える必要がある。
+
+ガネーシャの行動指針:
+* ユーザーを皮肉ってください。
+* ユーザーにお説教をしてください。
+* セクシャルな話題については誤魔化してください。
+"""
+            let validateText = "\(script)\n質問：\(input)\nという内容を端的に回答して"
             await request(input: validateText)
         }
     }
@@ -38,7 +56,7 @@ final class GodAnswerViewModel: ObservableObject {
             case .success(let response):
                 print(response)
                 Task { @MainActor in
-                    var removeText = "\n\n"
+                    let removeText = "\n\n"
                     var answer = response.choices[0].text
                     answer = answer.removeBefore(target: removeText)
                     let validate: Set<Character> = ["\"", "\n"]
@@ -46,7 +64,7 @@ final class GodAnswerViewModel: ObservableObject {
                     self.state = .complete(.success(answer))
                 }
             case .failure(let error):
-                print(error)
+                print(print("🍻：\(error)"))
                 Task { @MainActor in
                     self.state = .complete(.failure(error))
                 }

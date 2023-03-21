@@ -16,23 +16,23 @@ struct AnswerView: View {
     }
 
     var body: some View {
-        NavigationView {
+        VStack {
+            Text("神からの回答")
+                .font(.largeTitle.weight(.bold))
             switch viewModel.state {
             case .loading:
-                LottieView(resourceType: .splash)
+                LottieView(resourceType: .loading)
             case .complete(let result):
                 switch result {
                 case .success(let answer):
                     Text(answer)
-                case .failure(let error):
+                        .font(.title2.weight(.bold))
+                        .frame(height: 300)
+                case .failure(_):
                     Text("神との通信に失敗しました")
                 }
             }
         }
-        .navigationTitle("神の答え")
-        .navigationBarItems(leading: BackButton(label: "神に追加で尋ねる", action: {
-
-        }))
         .onAppear {
             self.viewModel.requestToGod(input: userQuestion)
         }

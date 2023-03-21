@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 @main
 struct ChatGPTisGodAppApp: App {
     var body: some Scene {

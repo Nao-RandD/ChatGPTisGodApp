@@ -25,7 +25,7 @@ final class APIClient {
             T.ResponseType == V {
 
         var urlRequest = request.asURLRequest()
-        urlRequest.setValue("Bearer \(Content.key)", forHTTPHeaderField: "Authorization")
+        urlRequest.setValue("Bearer \(Info.key)", forHTTPHeaderField: "Authorization")
         urlRequest.setValue("application/json", forHTTPHeaderField: "content-type")
 
         do {
