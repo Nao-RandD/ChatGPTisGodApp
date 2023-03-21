@@ -21,7 +21,7 @@ struct AnswerView: View {
                 .font(.largeTitle.weight(.bold))
             switch viewModel.state {
             case .loading:
-                LottieView(resourceType: .splash)
+                LottieView(resourceType: .loading)
             case .complete(let result):
                 switch result {
                 case .success(let answer):

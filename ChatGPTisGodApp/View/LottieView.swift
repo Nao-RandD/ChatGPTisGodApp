@@ -10,6 +10,7 @@ import Lottie
 
 enum LottieFileType: String {
     case splash = "splash"
+    case loading = "loading"
 }
 
 struct LottieView: UIViewRepresentable {

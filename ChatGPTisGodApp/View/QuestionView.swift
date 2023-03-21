@@ -66,6 +66,9 @@ struct QuestionView: View {
                 .cornerRadius(10)
                 .border(.white)
             }
+            .onTapGesture {
+                isFocusTextField = false
+            }
             .padding(20)
         } else {
             AnswerView(userQuestion: userInputText)

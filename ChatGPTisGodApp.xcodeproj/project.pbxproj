@@ -21,7 +21,7 @@
 		7FC1DF3329BD977200791AA6 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF3229BD977200791AA6 /* Color+Extension.swift */; };
 		7FC1DF3829BDA6F900791AA6 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7FC1DF3729BDA6F900791AA6 /* Lottie */; };
 		7FC1DF3A29BDAAA000791AA6 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF3929BDAAA000791AA6 /* LottieView.swift */; };
-		7FC1DF3C29BDAC8000791AA6 /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FC1DF3B29BDAC8000791AA6 /* splash.json */; };
+		7FC1DF3C29BDAC8000791AA6 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FC1DF3B29BDAC8000791AA6 /* loading.json */; };
 		7FC1DF3E29BDC66100791AA6 /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF3D29BDC66100791AA6 /* AnswerView.swift */; };
 		7FC1DF4029BDCF5000791AA6 /* GodAnswerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF3F29BDCF5000791AA6 /* GodAnswerViewModel.swift */; };
 		7FC1DF4329BE065E00791AA6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF4229BE065E00791AA6 /* String+Extension.swift */; };
@@ -33,6 +33,7 @@
 		7FC1DF9829C947EA00791AA6 /* AppInfoList in Frameworks */ = {isa = PBXBuildFile; productRef = 7FC1DF9729C947EA00791AA6 /* AppInfoList */; };
 		7FC1DF9A29C9492E00791AA6 /* AppInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF9929C9492E00791AA6 /* AppInfoView.swift */; };
 		7FC1DF9C29C95EAF00791AA6 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF9B29C95EAF00791AA6 /* Toast.swift */; };
+		7FC1DF9E29C9796B00791AA6 /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FC1DF9D29C9796B00791AA6 /* splash.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +64,7 @@
 		7FC1DF3029BD963000791AA6 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		7FC1DF3229BD977200791AA6 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		7FC1DF3929BDAAA000791AA6 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		7FC1DF3B29BDAC8000791AA6 /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash.json; sourceTree = "<group>"; };
+		7FC1DF3B29BDAC8000791AA6 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		7FC1DF3D29BDC66100791AA6 /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnswerView.swift; path = ChatGPTisGodApp/View/AnswerView.swift; sourceTree = SOURCE_ROOT; };
 		7FC1DF3F29BDCF5000791AA6 /* GodAnswerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodAnswerViewModel.swift; sourceTree = "<group>"; };
 		7FC1DF4229BE065E00791AA6 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 		7FC1DF9329C9445700791AA6 /* license-list.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "license-list.plist"; sourceTree = "<group>"; };
 		7FC1DF9929C9492E00791AA6 /* AppInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoView.swift; sourceTree = "<group>"; };
 		7FC1DF9B29C95EAF00791AA6 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		7FC1DF9D29C9796B00791AA6 /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +140,8 @@
 		7FC1DEF929B39CBD00791AA6 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				7FC1DF3B29BDAC8000791AA6 /* splash.json */,
+				7FC1DF3B29BDAC8000791AA6 /* loading.json */,
+				7FC1DF9D29C9796B00791AA6 /* splash.json */,
 				7FC1DEFA29B39CBD00791AA6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -312,9 +315,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FC1DF9429C9445800791AA6 /* license-list.plist in Resources */,
-				7FC1DF3C29BDAC8000791AA6 /* splash.json in Resources */,
+				7FC1DF3C29BDAC8000791AA6 /* loading.json in Resources */,
 				7FC1DEFB29B39CBD00791AA6 /* Preview Assets.xcassets in Resources */,
 				7FC1DEF829B39CBD00791AA6 /* Assets.xcassets in Resources */,
+				7FC1DF9E29C9796B00791AA6 /* splash.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +522,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChatGPTisGodApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "お悩み相談室";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -547,6 +552,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChatGPTisGodApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "お悩み相談室";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
