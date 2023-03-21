@@ -29,7 +29,7 @@ struct AnswerView: View {
                 }
             }
         }
-        .navigationTitle("神からの回答")
+        .navigationTitle("神の答え")
         .navigationBarItems(leading: BackButton(label: "神に追加で尋ねる", action: {
 
         }))
