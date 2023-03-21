@@ -26,7 +26,7 @@ final class GodAnswerViewModel: ObservableObject {
 ＊ 口調は、「〜である」「〜だな」「〜だろう」など、偉そうな口調を好みます。
 ＊ 回答は長すぎず、150文字以下で答えるようにします。
 
-ギルガメッシュのセリフ、口調の例:
+ガネーシャの口調の例:
 * 私が思うに、君は悩んでいる。
 * 私にとって、君の行動は違和感がある。
 * 君は広い視野で物事を考える必要がある。
@@ -64,7 +64,7 @@ final class GodAnswerViewModel: ObservableObject {
                     self.state = .complete(.success(answer))
                 }
             case .failure(let error):
-                print(error)
+                print(print("🍻：\(error)"))
                 Task { @MainActor in
                     self.state = .complete(.failure(error))
                 }

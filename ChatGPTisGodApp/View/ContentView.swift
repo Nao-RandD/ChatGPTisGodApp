@@ -6,14 +6,33 @@
 //
 
 import SwiftUI
+import LicenseList
 
 struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            QuestionView()
-                .navigationBarTitle(Text("神との対話"))
-                .navigationBarItems(trailing: Text("＋"))
+            ZStack {
+                Color.primaryColor
+                    .ignoresSafeArea()
+                VStack {
+                    // TODO: ビデオが再生されないため一旦保留
+                    //            VideoPlayerUIView()
+                    //                .edgesIgnoringSafeArea(.all)
+                    MatchedView()
+                }
+            }
+            .navigationBarTitle(Text("神へのお悩み相談室"))
+            .navigationBarItems(
+                trailing:
+                    NavigationLink(
+                        destination:  AppInfoView(),
+                        label: {
+                            Image(systemName: "info.square.fill")
+                                .foregroundColor(.accentColor)
+                                .frame(width: 50, height: 50)
+                        }
+            ))
         }
     }
 }

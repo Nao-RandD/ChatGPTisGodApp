@@ -12,7 +12,6 @@
 		7FC1DEF829B39CBD00791AA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FC1DEF729B39CBD00791AA6 /* Assets.xcassets */; };
 		7FC1DEFB29B39CBD00791AA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FC1DEFA29B39CBD00791AA6 /* Preview Assets.xcassets */; };
 		7FC1DF0529B39CBD00791AA6 /* ChatGPTisGodAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF0429B39CBD00791AA6 /* ChatGPTisGodAppTests.swift */; };
-		7FC1DF2129B3A2AB00791AA6 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7FC1DF2029B3A2AB00791AA6 /* OpenAISwift */; };
 		7FC1DF2329B3A34900791AA6 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF2229B3A34900791AA6 /* Content.swift */; };
 		7FC1DF2929B4345300791AA6 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF2829B4345300791AA6 /* BaseRequest.swift */; };
 		7FC1DF2B29B4366B00791AA6 /* OpenAIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF2A29B4366B00791AA6 /* OpenAIRequest.swift */; };
@@ -27,6 +26,13 @@
 		7FC1DF4029BDCF5000791AA6 /* GodAnswerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF3F29BDCF5000791AA6 /* GodAnswerViewModel.swift */; };
 		7FC1DF4329BE065E00791AA6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF4229BE065E00791AA6 /* String+Extension.swift */; };
 		7FC1DF4529BE0A0E00791AA6 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF4429BE0A0E00791AA6 /* QuestionView.swift */; };
+		7FC1DF4729C6ACD000791AA6 /* MatchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF4629C6ACD000791AA6 /* MatchedView.swift */; };
+		7FC1DF4929C72AF900791AA6 /* VideoPlayerUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF4829C72AF900791AA6 /* VideoPlayerUIView.swift */; };
+		7FC1DF9229C943E700791AA6 /* LicenseList in Frameworks */ = {isa = PBXBuildFile; productRef = 7FC1DF9129C943E700791AA6 /* LicenseList */; };
+		7FC1DF9429C9445800791AA6 /* license-list.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FC1DF9329C9445700791AA6 /* license-list.plist */; };
+		7FC1DF9829C947EA00791AA6 /* AppInfoList in Frameworks */ = {isa = PBXBuildFile; productRef = 7FC1DF9729C947EA00791AA6 /* AppInfoList */; };
+		7FC1DF9A29C9492E00791AA6 /* AppInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF9929C9492E00791AA6 /* AppInfoView.swift */; };
+		7FC1DF9C29C95EAF00791AA6 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF9B29C95EAF00791AA6 /* Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +68,12 @@
 		7FC1DF3F29BDCF5000791AA6 /* GodAnswerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodAnswerViewModel.swift; sourceTree = "<group>"; };
 		7FC1DF4229BE065E00791AA6 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		7FC1DF4429BE0A0E00791AA6 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		7FC1DF4629C6ACD000791AA6 /* MatchedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedView.swift; sourceTree = "<group>"; };
+		7FC1DF4829C72AF900791AA6 /* VideoPlayerUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerUIView.swift; sourceTree = "<group>"; };
+		7FC1DF4E29C7303800791AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7FC1DF9329C9445700791AA6 /* license-list.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "license-list.plist"; sourceTree = "<group>"; };
+		7FC1DF9929C9492E00791AA6 /* AppInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoView.swift; sourceTree = "<group>"; };
+		7FC1DF9B29C95EAF00791AA6 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +81,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FC1DF2129B3A2AB00791AA6 /* OpenAISwift in Frameworks */,
 				7FC1DF3829BDA6F900791AA6 /* Lottie in Frameworks */,
+				7FC1DF9829C947EA00791AA6 /* AppInfoList in Frameworks */,
+				7FC1DF9229C943E700791AA6 /* LicenseList in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +100,7 @@
 		7FC1DEE729B39CBB00791AA6 = {
 			isa = PBXGroup;
 			children = (
+				7FC1DF9329C9445700791AA6 /* license-list.plist */,
 				7FC1DEF229B39CBB00791AA6 /* ChatGPTisGodApp */,
 				7FC1DF0329B39CBD00791AA6 /* ChatGPTisGodAppTests */,
 				7FC1DF0D29B39CBD00791AA6 /* ChatGPTisGodAppUITests */,
@@ -106,6 +120,7 @@
 		7FC1DEF229B39CBB00791AA6 /* ChatGPTisGodApp */ = {
 			isa = PBXGroup;
 			children = (
+				7FC1DF4E29C7303800791AA6 /* Info.plist */,
 				7FC1DF4129BDDFE600791AA6 /* Extension */,
 				7FC1DF2629B4317100791AA6 /* View */,
 				7FC1DF2529B4316A00791AA6 /* ViewModel */,
@@ -113,6 +128,7 @@
 				7FC1DEF329B39CBB00791AA6 /* ChatGPTisGodAppApp.swift */,
 				7FC1DEF729B39CBD00791AA6 /* Assets.xcassets */,
 				7FC1DEF929B39CBD00791AA6 /* Preview Content */,
+				7FC1DF4F29C7347800791AA6 /* Resources */,
 				7FC1DF2229B3A34900791AA6 /* Content.swift */,
 				7FC1DF3029BD963000791AA6 /* LaunchScreen.swift */,
 			);
@@ -169,6 +185,10 @@
 				7FC1DEF529B39CBB00791AA6 /* ContentView.swift */,
 				7FC1DF3929BDAAA000791AA6 /* LottieView.swift */,
 				7FC1DF4429BE0A0E00791AA6 /* QuestionView.swift */,
+				7FC1DF4629C6ACD000791AA6 /* MatchedView.swift */,
+				7FC1DF4829C72AF900791AA6 /* VideoPlayerUIView.swift */,
+				7FC1DF9929C9492E00791AA6 /* AppInfoView.swift */,
+				7FC1DF9B29C95EAF00791AA6 /* Toast.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,6 +212,13 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		7FC1DF4F29C7347800791AA6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -202,6 +229,7 @@
 				7FC1DEEC29B39CBB00791AA6 /* Sources */,
 				7FC1DEED29B39CBB00791AA6 /* Frameworks */,
 				7FC1DEEE29B39CBB00791AA6 /* Resources */,
+				7FC1DF9529C9447200791AA6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -209,8 +237,9 @@
 			);
 			name = ChatGPTisGodApp;
 			packageProductDependencies = (
-				7FC1DF2029B3A2AB00791AA6 /* OpenAISwift */,
 				7FC1DF3729BDA6F900791AA6 /* Lottie */,
+				7FC1DF9129C943E700791AA6 /* LicenseList */,
+				7FC1DF9729C947EA00791AA6 /* AppInfoList */,
 			);
 			productName = ChatGPTisGodApp;
 			productReference = 7FC1DEF029B39CBB00791AA6 /* ChatGPTisGodApp.app */;
@@ -263,8 +292,9 @@
 			);
 			mainGroup = 7FC1DEE729B39CBB00791AA6;
 			packageReferences = (
-				7FC1DF1F29B3A2AB00791AA6 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
 				7FC1DF3629BDA6F900791AA6 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				7FC1DF9029C943E700791AA6 /* XCRemoteSwiftPackageReference "LicenseList" */,
+				7FC1DF9629C947EA00791AA6 /* XCRemoteSwiftPackageReference "AppInfoList" */,
 			);
 			productRefGroup = 7FC1DEF129B39CBB00791AA6 /* Products */;
 			projectDirPath = "";
@@ -281,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FC1DF9429C9445800791AA6 /* license-list.plist in Resources */,
 				7FC1DF3C29BDAC8000791AA6 /* splash.json in Resources */,
 				7FC1DEFB29B39CBD00791AA6 /* Preview Assets.xcassets in Resources */,
 				7FC1DEF829B39CBD00791AA6 /* Assets.xcassets in Resources */,
@@ -296,6 +327,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7FC1DF9529C9447200791AA6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SOURCE_PACKAGES_PATH=`echo ${BUILD_DIR%Build/*}SourcePackages`\n\n# Build SourcePackagesParser\nxcrun --sdk macosx swift build -c release \\\n  --package-path ${SOURCE_PACKAGES_PATH}/checkouts/LicenseList \\\n  --product spp\n\n# Run SourcePackagesParser\n${SOURCE_PACKAGES_PATH}/checkouts/LicenseList/.build/release/spp ${SRCROOT} ${SOURCE_PACKAGES_PATH}\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7FC1DEEC29B39CBB00791AA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -305,8 +356,10 @@
 				7FC1DF3129BD963000791AA6 /* LaunchScreen.swift in Sources */,
 				7FC1DF2929B4345300791AA6 /* BaseRequest.swift in Sources */,
 				7FC1DEF629B39CBB00791AA6 /* ContentView.swift in Sources */,
+				7FC1DF4729C6ACD000791AA6 /* MatchedView.swift in Sources */,
 				7FC1DF2F29B43D7400791AA6 /* APIClient.swift in Sources */,
 				7FC1DF2D29B437AD00791AA6 /* OpenAICompletion.swift in Sources */,
+				7FC1DF9C29C95EAF00791AA6 /* Toast.swift in Sources */,
 				7FC1DF4329BE065E00791AA6 /* String+Extension.swift in Sources */,
 				7FC1DEF429B39CBB00791AA6 /* ChatGPTisGodAppApp.swift in Sources */,
 				7FC1DF3E29BDC66100791AA6 /* AnswerView.swift in Sources */,
@@ -315,6 +368,8 @@
 				7FC1DF4029BDCF5000791AA6 /* GodAnswerViewModel.swift in Sources */,
 				7FC1DF2329B3A34900791AA6 /* Content.swift in Sources */,
 				7FC1DF2B29B4366B00791AA6 /* OpenAIRequest.swift in Sources */,
+				7FC1DF4929C72AF900791AA6 /* VideoPlayerUIView.swift in Sources */,
+				7FC1DF9A29C9492E00791AA6 /* AppInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,7 +517,7 @@
 				DEVELOPMENT_TEAM = 44SQBVTPVY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = ChatGPTisGodApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -491,7 +546,7 @@
 				DEVELOPMENT_TEAM = 44SQBVTPVY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = ChatGPTisGodApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -582,14 +637,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		7FC1DF1F29B3A2AB00791AA6 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		7FC1DF3629BDA6F900791AA6 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -598,18 +645,39 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		7FC1DF9029C943E700791AA6 /* XCRemoteSwiftPackageReference "LicenseList" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cybozu/LicenseList.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		7FC1DF9629C947EA00791AA6 /* XCRemoteSwiftPackageReference "AppInfoList" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kamimi01/AppInfoList.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7FC1DF2029B3A2AB00791AA6 /* OpenAISwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7FC1DF1F29B3A2AB00791AA6 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
-			productName = OpenAISwift;
-		};
 		7FC1DF3729BDA6F900791AA6 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7FC1DF3629BDA6F900791AA6 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		7FC1DF9129C943E700791AA6 /* LicenseList */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FC1DF9029C943E700791AA6 /* XCRemoteSwiftPackageReference "LicenseList" */;
+			productName = LicenseList;
+		};
+		7FC1DF9729C947EA00791AA6 /* AppInfoList */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FC1DF9629C947EA00791AA6 /* XCRemoteSwiftPackageReference "AppInfoList" */;
+			productName = AppInfoList;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
