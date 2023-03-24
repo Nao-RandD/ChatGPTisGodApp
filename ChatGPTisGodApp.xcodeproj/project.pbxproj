@@ -12,7 +12,7 @@
 		7FC1DEF829B39CBD00791AA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FC1DEF729B39CBD00791AA6 /* Assets.xcassets */; };
 		7FC1DEFB29B39CBD00791AA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FC1DEFA29B39CBD00791AA6 /* Preview Assets.xcassets */; };
 		7FC1DF0529B39CBD00791AA6 /* ChatGPTisGodAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF0429B39CBD00791AA6 /* ChatGPTisGodAppTests.swift */; };
-		7FC1DF2329B3A34900791AA6 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF2229B3A34900791AA6 /* Content.swift */; };
+		7FC1DF2329B3A34900791AA6 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF2229B3A34900791AA6 /* Info.swift */; };
 		7FC1DF2929B4345300791AA6 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF2829B4345300791AA6 /* BaseRequest.swift */; };
 		7FC1DF2B29B4366B00791AA6 /* OpenAIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF2A29B4366B00791AA6 /* OpenAIRequest.swift */; };
 		7FC1DF2D29B437AD00791AA6 /* OpenAICompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF2C29B437AD00791AA6 /* OpenAICompletion.swift */; };
@@ -56,7 +56,7 @@
 		7FC1DF0429B39CBD00791AA6 /* ChatGPTisGodAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTisGodAppTests.swift; sourceTree = "<group>"; };
 		7FC1DF0E29B39CBD00791AA6 /* ChatGPTisGodAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTisGodAppUITests.swift; sourceTree = "<group>"; };
 		7FC1DF1029B39CBD00791AA6 /* ChatGPTisGodAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTisGodAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		7FC1DF2229B3A34900791AA6 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		7FC1DF2229B3A34900791AA6 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		7FC1DF2829B4345300791AA6 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		7FC1DF2A29B4366B00791AA6 /* OpenAIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIRequest.swift; sourceTree = "<group>"; };
 		7FC1DF2C29B437AD00791AA6 /* OpenAICompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAICompletion.swift; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 				7FC1DEF729B39CBD00791AA6 /* Assets.xcassets */,
 				7FC1DEF929B39CBD00791AA6 /* Preview Content */,
 				7FC1DF4F29C7347800791AA6 /* Resources */,
-				7FC1DF2229B3A34900791AA6 /* Content.swift */,
+				7FC1DF2229B3A34900791AA6 /* Info.swift */,
 				7FC1DF3029BD963000791AA6 /* LaunchScreen.swift */,
 			);
 			path = ChatGPTisGodApp;
@@ -370,7 +370,7 @@
 				7FC1DF3A29BDAAA000791AA6 /* LottieView.swift in Sources */,
 				7FC1DF4529BE0A0E00791AA6 /* QuestionView.swift in Sources */,
 				7FC1DF4029BDCF5000791AA6 /* GodAnswerViewModel.swift in Sources */,
-				7FC1DF2329B3A34900791AA6 /* Content.swift in Sources */,
+				7FC1DF2329B3A34900791AA6 /* Info.swift in Sources */,
 				7FC1DF2B29B4366B00791AA6 /* OpenAIRequest.swift in Sources */,
 				7FC1DF4929C72AF900791AA6 /* VideoPlayerUIView.swift in Sources */,
 				7FC1DF9A29C9492E00791AA6 /* AppInfoView.swift in Sources */,

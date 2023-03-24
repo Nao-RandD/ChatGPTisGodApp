@@ -8,5 +8,5 @@
 import Foundation
 
 final class Info {
-    static let key = "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"
+    static let key = "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"
 }
