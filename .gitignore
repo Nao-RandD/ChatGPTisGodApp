@@ -22,7 +22,7 @@ DerivedData/
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
-./ChatGPTisGodApp/Info.swift
+/ChatGPTisGodApp/Info.swift
 ## library
 Pods/*
 Carthage/Build/
