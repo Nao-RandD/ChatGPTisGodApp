@@ -10,7 +10,7 @@ import AppInfoList
 
 struct AppInfoView: View {
     let info = AppInfo(
-        termOfUseURL: URL(string: "https://www.nao-randd.info/policy"),
+        termOfUseURL: URL(string: "https://nao-randd.github.io/ChatGPTisGodApp/"),
 //        appURL: URL(string: "https://apps.apple.com/jp/app/ez-pomo/id1668609447?l=ja")!,
            developerInfoURL: URL(string: "https://twitter.com/Nao_RandD")!
 //           appStoreID: "1668609447"
