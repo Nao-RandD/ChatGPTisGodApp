@@ -9,30 +9,36 @@ import SwiftUI
 import LicenseList
 
 struct ContentView: View {
+    @State var isShowNavigationBar = true
+    @Namespace var namespace
 
     var body: some View {
         NavigationView {
             ZStack {
                 Color.primaryColor
                     .ignoresSafeArea()
-                VStack {
-                    // TODO: ビデオが再生されないため一旦保留
-                    //            VideoPlayerUIView()
-                    //                .edgesIgnoringSafeArea(.all)
-                    MatchedView()
+                // TODO: ビデオが再生されないため一旦保留
+                //            VideoPlayerUIView()
+                //                .edgesIgnoringSafeArea(.all)
+                MatchedView(isShowNavigationBar: $isShowNavigationBar)
+                if isShowNavigationBar {
+                    VStack {}
+                        .navigationBarTitle(Text("神へのお悩み相談室"))
+                        .navigationBarItems(
+                            trailing:
+                                NavigationLink(
+                                    destination:  AppInfoView(),
+                                    label: {
+                                        Image(systemName: "info.square.fill")
+                                            .foregroundColor(.accentColor)
+                                            .frame(width: 50, height: 50)
+                                    }
+                                ))
+                } else {
+                    VStack {}
+                        .navigationBarTitle(Text(""))
                 }
             }
-            .navigationBarTitle(Text("神へのお悩み相談室"))
-            .navigationBarItems(
-                trailing:
-                    NavigationLink(
-                        destination:  AppInfoView(),
-                        label: {
-                            Image(systemName: "info.square.fill")
-                                .foregroundColor(.accentColor)
-                                .frame(width: 50, height: 50)
-                        }
-            ))
         }
     }
 }

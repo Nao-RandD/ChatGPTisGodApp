@@ -11,6 +11,7 @@ struct MatchedView: View {
     @State var isShow: Bool = false
     @State var isShowTitle = true
     @Namespace var namespace
+    @Binding var isShowNavigationBar: Bool
 
     var body: some View {
         ZStack {
@@ -28,6 +29,7 @@ struct MatchedView: View {
                         Button(action: {
                             withAnimation {
                                 isShow.toggle()
+                                isShowNavigationBar.toggle()
                                 if !isShowTitle {
                                     isShowTitle.toggle()
                                 }
@@ -36,7 +38,9 @@ struct MatchedView: View {
                             Image(systemName: "x.circle.fill")
                         })
                     }
-                    QuestionView(isShowTitle: $isShowTitle, namespace: namespace)
+                    QuestionView(isShowTitle: $isShowTitle,
+                                 namespace: namespace)
+
                 }
                 .padding(20)
                 .background(
@@ -66,6 +70,7 @@ struct MatchedView: View {
                 .onTapGesture {
                     withAnimation {
                         isShow.toggle()
+                        isShowNavigationBar.toggle()
                     }
                 }
             }
@@ -76,6 +81,6 @@ struct MatchedView: View {
 
 struct MatchedView_Previews: PreviewProvider {
     static var previews: some View {
-        MatchedView()
+        MatchedView(isShowNavigationBar: .constant(false))
     }
 }

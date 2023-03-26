@@ -23,13 +23,9 @@ struct QuestionView: View {
                         .font(.title2)
                         .foregroundColor(.white)
                     TextField("最近仕事が疲れている", text: $userInputText, axis: .vertical)
-                        .onSubmit {
-                            // TODO: バリデーションしたい
-                        }
                         .focused($isFocusTextField, equals: true)
                         .font(.title2)
                         .padding()
-                        .lineLimit(nil)
                         .minimumScaleFactor(0.5)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
@@ -45,7 +41,7 @@ struct QuestionView: View {
                     Spacer()
                 }
                 .onTapGesture {
-                    isFocusTextField = true
+                    isFocusTextField.toggle()
                 }
                 Spacer()
                 Button(action: {
@@ -66,9 +62,6 @@ struct QuestionView: View {
                 .cornerRadius(10)
                 .border(.white)
             }
-            .onTapGesture {
-                isFocusTextField = false
-            }
             .padding(20)
         } else {
             AnswerView(userQuestion: userInputText)
@@ -79,6 +72,7 @@ struct QuestionView: View {
 struct QuestionView_Previews: PreviewProvider {
     @Namespace static var namespace
     static var previews: some View {
-        QuestionView(isShowTitle: .constant(false), namespace: namespace)
+        QuestionView(isShowTitle: .constant(false),
+                     namespace: namespace)
     }
 }
