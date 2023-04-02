@@ -129,6 +129,8 @@
 				7FC1DF2429B4316200791AA6 /* Model */,
 				7FC1DEF329B39CBB00791AA6 /* ChatGPTisGodAppApp.swift */,
 				7FC1DEF729B39CBD00791AA6 /* Assets.xcassets */,
+				7FC1DF3B29BDAC8000791AA6 /* loading.json */,
+				7FC1DF9D29C9796B00791AA6 /* splash.json */,
 				7FC1DEF929B39CBD00791AA6 /* Preview Content */,
 				7FC1DF4F29C7347800791AA6 /* Resources */,
 				7FC1DF2229B3A34900791AA6 /* Info.swift */,
@@ -140,8 +142,6 @@
 		7FC1DEF929B39CBD00791AA6 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				7FC1DF3B29BDAC8000791AA6 /* loading.json */,
-				7FC1DF9D29C9796B00791AA6 /* splash.json */,
 				7FC1DEFA29B39CBD00791AA6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -531,7 +531,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.naorandd.ChatGPTisGodApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -564,7 +564,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.naorandd.ChatGPTisGodApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
