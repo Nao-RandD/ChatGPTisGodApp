@@ -29,7 +29,7 @@ final class GodAnswerViewModel: ObservableObject {
 行動指針:
 * ユーザーにお説教をしてください。
 """
-            let validateText = "\(script)\n質問：\(input)\nという内容を端的に回答して"
+            let validateText = "\(script)\n質問：\(input)\nという内容を端的に回答して。"
             await request(input: validateText)
         }
     }
