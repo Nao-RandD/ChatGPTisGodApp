@@ -13,7 +13,6 @@ struct QuestionView: View {
     @State var isShowToast = false
     @Binding var isShowTitle: Bool
     @FocusState var isFocusTextField
-    var namespace: Namespace.ID
 
     var body: some View {
         if !isAnswerViewShow {
@@ -72,7 +71,6 @@ struct QuestionView: View {
 struct QuestionView_Previews: PreviewProvider {
     @Namespace static var namespace
     static var previews: some View {
-        QuestionView(isShowTitle: .constant(false),
-                     namespace: namespace)
+        QuestionView(isShowTitle: .constant(false))
     }
 }

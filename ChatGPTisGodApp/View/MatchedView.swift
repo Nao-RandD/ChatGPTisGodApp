@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct MatchedView: View {
-    @State var isShow: Bool = false
+    @State var isShowQuestionView: Bool = false
     @State var isShowTitle = true
     @Namespace var namespace
     @Binding var isShowNavigationBar: Bool
 
     var body: some View {
         ZStack {
-            if isShow {
+            if isShowQuestionView {
                 VStack {
                     HStack {
                         if isShowTitle {
@@ -28,7 +28,7 @@ struct MatchedView: View {
                         }
                         Button(action: {
                             withAnimation {
-                                isShow.toggle()
+                                isShowQuestionView.toggle()
                                 isShowNavigationBar.toggle()
                                 if !isShowTitle {
                                     isShowTitle.toggle()
@@ -38,9 +38,9 @@ struct MatchedView: View {
                             Image(systemName: "x.circle.fill")
                         })
                     }
-                    QuestionView(isShowTitle: $isShowTitle,
-                                 namespace: namespace)
-
+                    QuestionView(isShowTitle: $isShowTitle)
+                        .opacity(isShowQuestionView ? 1 : 0)
+                        .matchedGeometryEffect(id: "questionView", in: namespace)
                 }
                 .padding(20)
                 .background(
@@ -69,7 +69,7 @@ struct MatchedView: View {
                 .padding(20)
                 .onTapGesture {
                     withAnimation {
-                        isShow.toggle()
+                        isShowQuestionView.toggle()
                         isShowNavigationBar.toggle()
                     }
                 }
