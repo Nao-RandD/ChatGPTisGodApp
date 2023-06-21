@@ -20,9 +20,9 @@ struct MatchedView: View {
                     HStack {
                         if isShowTitle {
                             Text("神への質問")
+                                .matchedGeometryEffect(id: "Title", in: namespace)
                                 .font(.largeTitle.weight(.bold))
                                 .frame(maxWidth: .infinity, alignment: .leading)
-                            .matchedGeometryEffect(id: "Title", in: namespace)
                         } else {
                             Spacer()
                         }
@@ -39,31 +39,33 @@ struct MatchedView: View {
                         })
                     }
                     QuestionView(isShowTitle: $isShowTitle)
+                        .matchedGeometryEffect(id: "questionView", in: namespace)
                         .opacity(isShowQuestionView ? 1 : 0)
+                }
+                .padding(20)
+                .background(
+                    Image("BackgroundImage")
+                        .resizable()
+                        .matchedGeometryEffect(id: "background", in: namespace)
+                        .cornerRadius(20).matchedGeometryEffect(id: "radius", in: namespace)
+                )
+                .foregroundStyle(.white)
+                .padding(20)
+            } else {
+                VStack {
+                    Text("神への質問")
+                        .matchedGeometryEffect(id: "Title", in: namespace)
+                        .font(.largeTitle.weight(.semibold))
+                        .frame(maxWidth: .infinity, minHeight: 250, alignment: .center)
+                    EmptyView()
                         .matchedGeometryEffect(id: "questionView", in: namespace)
                 }
                 .padding(20)
                 .background(
                     Image("BackgroundImage")
                         .resizable()
-                        .cornerRadius(20).matchedGeometryEffect(id: "radius", in: namespace)
                         .matchedGeometryEffect(id: "background", in: namespace)
-                )
-                .foregroundStyle(.white)
-                .padding(20)
-            } else {
-                VStack {
-                    Text("神に質問してみる")
-                        .font(.largeTitle.weight(.semibold))
-                        .frame(maxWidth: .infinity, minHeight: 250, alignment: .leading)
-                    .matchedGeometryEffect(id: "Title", in: namespace)
-                }
-                .padding(20)
-                .background(
-                    Image("BackgroundImage")
-                        .resizable()
                         .cornerRadius(20).matchedGeometryEffect(id: "radius", in: namespace)
-                        .matchedGeometryEffect(id: "background", in: namespace)
                 )
                 .foregroundStyle(.white)
                 .padding(20)
