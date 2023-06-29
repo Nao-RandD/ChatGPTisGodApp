@@ -29,7 +29,6 @@
 		7FC1DF4529BE0A0E00791AA6 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF4429BE0A0E00791AA6 /* QuestionView.swift */; };
 		7FC1DF4729C6ACD000791AA6 /* MatchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF4629C6ACD000791AA6 /* MatchedView.swift */; };
 		7FC1DF4929C72AF900791AA6 /* VideoPlayerUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF4829C72AF900791AA6 /* VideoPlayerUIView.swift */; };
-		7FC1DF9229C943E700791AA6 /* LicenseList in Frameworks */ = {isa = PBXBuildFile; productRef = 7FC1DF9129C943E700791AA6 /* LicenseList */; };
 		7FC1DF9429C9445800791AA6 /* license-list.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FC1DF9329C9445700791AA6 /* license-list.plist */; };
 		7FC1DF9829C947EA00791AA6 /* AppInfoList in Frameworks */ = {isa = PBXBuildFile; productRef = 7FC1DF9729C947EA00791AA6 /* AppInfoList */; };
 		7FC1DF9A29C9492E00791AA6 /* AppInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF9929C9492E00791AA6 /* AppInfoView.swift */; };
@@ -87,7 +86,6 @@
 			files = (
 				7FC1DF3829BDA6F900791AA6 /* Lottie in Frameworks */,
 				7FC1DF9829C947EA00791AA6 /* AppInfoList in Frameworks */,
-				7FC1DF9229C943E700791AA6 /* LicenseList in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +242,6 @@
 			name = ChatGPTisGodApp;
 			packageProductDependencies = (
 				7FC1DF3729BDA6F900791AA6 /* Lottie */,
-				7FC1DF9129C943E700791AA6 /* LicenseList */,
 				7FC1DF9729C947EA00791AA6 /* AppInfoList */,
 			);
 			productName = ChatGPTisGodApp;
@@ -299,7 +296,6 @@
 			mainGroup = 7FC1DEE729B39CBB00791AA6;
 			packageReferences = (
 				7FC1DF3629BDA6F900791AA6 /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				7FC1DF9029C943E700791AA6 /* XCRemoteSwiftPackageReference "LicenseList" */,
 				7FC1DF9629C947EA00791AA6 /* XCRemoteSwiftPackageReference "AppInfoList" */,
 			);
 			productRefGroup = 7FC1DEF129B39CBB00791AA6 /* Products */;
@@ -661,20 +657,12 @@
 				minimumVersion = 4.0.0;
 			};
 		};
-		7FC1DF9029C943E700791AA6 /* XCRemoteSwiftPackageReference "LicenseList" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/cybozu/LicenseList.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		7FC1DF9629C947EA00791AA6 /* XCRemoteSwiftPackageReference "AppInfoList" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kamimi01/AppInfoList.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.0;
+				kind = exactVersion;
+				version = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -684,11 +672,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7FC1DF3629BDA6F900791AA6 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
-		};
-		7FC1DF9129C943E700791AA6 /* LicenseList */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7FC1DF9029C943E700791AA6 /* XCRemoteSwiftPackageReference "LicenseList" */;
-			productName = LicenseList;
 		};
 		7FC1DF9729C947EA00791AA6 /* AppInfoList */ = {
 			isa = XCSwiftPackageProductDependency;
