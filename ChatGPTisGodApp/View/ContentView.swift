@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import LicenseList
 
 struct ContentView: View {
     @State var isShowNavigationBar = true
