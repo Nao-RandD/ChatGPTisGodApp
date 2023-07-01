@@ -15,10 +15,14 @@ struct AppInfoView: View {
         developerInfoURL: URL(string: "https://twitter.com/Nao_RandD"),
         appStoreID: "6446774783"
     )
+    let appearance = AppInfoAppearance(
+        cellTextColor: .accentColor,
+        versionTextColor: .accentColor
+    )
     let fileURL = Bundle.main.url(forResource: "license-list", withExtension: "plist")!
 
     var body: some View {
-        AppInfoListView(info: info, licenseFileURL: fileURL)
+        AppInfoListView(appearance: appearance, info: info, licenseFileURL: fileURL)
     }
 }
 
