@@ -10,12 +10,20 @@ import SwiftUI
 struct ContentView: View {
     @State var isShowNavigationBar = true
     @Namespace var namespace
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         NavigationView {
             ZStack {
-                Color.primaryColor
+                Color.backgroundColor(colorScheme)
                     .ignoresSafeArea()
+                if colorScheme == .dark {
+                    Color.black
+                        .ignoresSafeArea()
+                } else {
+                    Color.primaryColor
+                        .ignoresSafeArea()
+                }
                 // TODO: ビデオが再生されないため一旦保留
                 //            VideoPlayerUIView()
                 //                .edgesIgnoringSafeArea(.all)
@@ -29,7 +37,7 @@ struct ContentView: View {
                                     destination:  AppInfoView(),
                                     label: {
                                         Image(systemName: "info.square.fill")
-                                            .foregroundColor(.accentColor)
+                                            .foregroundColor(.accentColor(colorScheme))
                                             .frame(width: 50, height: 50)
                                     }
                                 ))

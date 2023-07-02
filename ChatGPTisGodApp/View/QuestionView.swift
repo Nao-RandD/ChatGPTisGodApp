@@ -13,6 +13,7 @@ struct QuestionView: View {
     @State var isShowToast = false
     @Binding var isShowTitle: Bool
     @FocusState var isFocusTextField
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         if !isAnswerViewShow {
@@ -30,10 +31,10 @@ struct QuestionView: View {
                         .autocorrectionDisabled()
                         .frame(height: 400)
                         .foregroundColor(
-                            Color.accentColor
+                            Color.accentColor(colorScheme)
                         )
                         .background(
-                            Color.secondaryColor
+                            Color.backgroundColor(colorScheme)
                         )
                         .cornerRadius(30)
                         .toast(message: "質問を入力してください", isShowing: $isShowToast, duration: Toast.short)
@@ -56,7 +57,7 @@ struct QuestionView: View {
                 })
                 .frame(width: 250)
                 .background(
-                    Color.accentColor
+                    Color.backgroundColor(colorScheme)
                 )
                 .cornerRadius(10)
                 .border(.white)
