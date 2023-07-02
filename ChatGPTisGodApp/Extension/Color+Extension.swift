@@ -8,7 +8,20 @@
 import SwiftUI
 
 extension Color {
-    static let accentColor = Color("accent-color")
+    static var accentColor: (ColorScheme) -> Color = { colorScheme in
+        if colorScheme == .dark {
+            return .white
+        } else {
+            return Color("accent-color")
+        }
+    }
+    static let backgroundColor: (ColorScheme) -> Color = { colorScheme in
+        if colorScheme == .dark {
+            return .black
+        } else {
+            return secondaryColor
+        }
+    }
     static let primaryColor = Color("primary-color")
     static let secondaryColor = Color("secondary-color")
     static let thirdColor = Color("third-color")
