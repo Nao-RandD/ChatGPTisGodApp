@@ -5,7 +5,7 @@ ChatGPTisGodApp is an iOS application that allows users to seek advice and guida
 ## Specifications
 
 - Supported Operating System: iOS 16 and above
-- Users can engage in consultations and seek advice on their concerns through the ChatGPT API.
+- Users can engage in consultations and seek advice on their concerns through the OpenAI API.
 - ChatGPT is regarded as a deity, and by receiving its revelations, users can lead a more enriched life.
 - This app serves as a tool to alleviate everyday worries and assist users in living a more abundant life.
 
