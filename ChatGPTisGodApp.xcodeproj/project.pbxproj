@@ -234,6 +234,7 @@
 				7FC1DEED29B39CBB00791AA6 /* Frameworks */,
 				7FC1DEEE29B39CBB00791AA6 /* Resources */,
 				7FC1DF9529C9447200791AA6 /* ShellScript */,
+				7FC00EDD2A55A0AB00B5AEB5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -331,6 +332,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7FC00EDD2A55A0AB00B5AEB5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif test -d /opt/homebrew/bin; then\n    PATH=/opt/homebrew/bin/:$PATH\nfi\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		7FC1DF9529C9447200791AA6 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
