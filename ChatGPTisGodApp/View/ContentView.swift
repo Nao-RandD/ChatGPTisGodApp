@@ -14,37 +14,42 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            ZStack {
-                Color.backgroundColor(colorScheme)
-                    .ignoresSafeArea()
-                if colorScheme == .dark {
-                    Color.black
+            VStack {
+                ZStack {
+                    Color.backgroundColor(colorScheme)
                         .ignoresSafeArea()
-                } else {
-                    Color.primaryColor
-                        .ignoresSafeArea()
+                    if colorScheme == .dark {
+                        Color.black
+                            .ignoresSafeArea()
+                    } else {
+                        Color.primaryColor
+                            .ignoresSafeArea()
+                    }
+                    // TODO: ビデオが再生されないため一旦保留
+                    //            VideoPlayerUIView()
+                    //                .edgesIgnoringSafeArea(.all)
+                    MatchedView(isShowNavigationBar: $isShowNavigationBar)
+                    if isShowNavigationBar {
+                        VStack {}
+                            .navigationBarTitle(Text("神へのお悩み相談室"))
+                            .navigationBarItems(
+                                trailing:
+                                    NavigationLink(
+                                        destination:  AppInfoView(),
+                                        label: {
+                                            Image(systemName: "info.square.fill")
+                                                .foregroundColor(.accentColor(colorScheme))
+                                                .frame(width: 50, height: 50)
+                                        }
+                                    ))
+                    } else {
+                        VStack {}
+                            .navigationBarTitle(Text(""))
+                    }
                 }
-                // TODO: ビデオが再生されないため一旦保留
-                //            VideoPlayerUIView()
-                //                .edgesIgnoringSafeArea(.all)
-                MatchedView(isShowNavigationBar: $isShowNavigationBar)
-                if isShowNavigationBar {
-                    VStack {}
-                        .navigationBarTitle(Text("神へのお悩み相談室"))
-                        .navigationBarItems(
-                            trailing:
-                                NavigationLink(
-                                    destination:  AppInfoView(),
-                                    label: {
-                                        Image(systemName: "info.square.fill")
-                                            .foregroundColor(.accentColor(colorScheme))
-                                            .frame(width: 50, height: 50)
-                                    }
-                                ))
-                } else {
-                    VStack {}
-                        .navigationBarTitle(Text(""))
-                }
+                ADBannerViewControllerRepresentable()
+                    .frame(height: 50)
+                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 50, trailing: 10))
             }
         }
     }
