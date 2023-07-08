@@ -25,7 +25,7 @@ struct ADBannerViewControllerRepresentable: UIViewControllerRepresentable {
 class ADBannerViewController: UIViewController {
     override func viewDidLoad() {
         let bannerView = GADBannerView(adSize: GADAdSizeBanner)
-        bannerView.adUnitID = "ca-app-pub-2587202478053936/3071858923"
+        bannerView.adUnitID = Info.adUnitID
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         bannerView.translatesAutoresizingMaskIntoConstraints = false
