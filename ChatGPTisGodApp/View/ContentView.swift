@@ -17,13 +17,6 @@ struct ContentView: View {
             ZStack {
                 Color.backgroundColor(colorScheme)
                     .ignoresSafeArea()
-                if colorScheme == .dark {
-                    Color.black
-                        .ignoresSafeArea()
-                } else {
-                    Color.primaryColor
-                        .ignoresSafeArea()
-                }
                 // TODO: ビデオが再生されないため一旦保留
                 //            VideoPlayerUIView()
                 //                .edgesIgnoringSafeArea(.all)
@@ -34,7 +27,7 @@ struct ContentView: View {
                         .navigationBarItems(
                             trailing:
                                 NavigationLink(
-                                    destination:  AppInfoView(),
+                                    destination: AppInfoView(),
                                     label: {
                                         Image(systemName: "info.square.fill")
                                             .foregroundColor(.accentColor(colorScheme))

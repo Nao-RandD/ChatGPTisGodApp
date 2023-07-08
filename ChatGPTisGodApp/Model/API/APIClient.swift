@@ -30,7 +30,8 @@ final class APIClient {
 
         do {
             let (data, response) = try await URLSession.shared.data(for: urlRequest)
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return .failure(.responseError) }
+            guard let response = response as? HTTPURLResponse,
+                    response.statusCode == 200 else { return .failure(.responseError) }
 
             guard let responseData = try? decoder.decode(V.self, from: data) else { return .failure(.decordError) }
             return .success(responseData)

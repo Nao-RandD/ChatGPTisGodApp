@@ -14,70 +14,73 @@ struct MatchedView: View {
     @Binding var isShowNavigationBar: Bool
 
     var body: some View {
-        ZStack {
-            if isShowQuestionView {
-                VStack {
-                    HStack {
-                        if isShowTitle {
-                            Text("神への質問")
-                                .matchedGeometryEffect(id: "Title", in: namespace)
-                                .font(.largeTitle.weight(.bold))
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                        } else {
-                            Spacer()
-                        }
-                        Button(action: {
-                            withAnimation {
-                                isShowQuestionView.toggle()
-                                isShowNavigationBar.toggle()
-                                if !isShowTitle {
-                                    isShowTitle.toggle()
-                                }
+        VStack {
+            ZStack {
+                if isShowQuestionView {
+                    VStack {
+                        HStack {
+                            if isShowTitle {
+                                Text("神への質問")
+                                    .matchedGeometryEffect(id: "Title", in: namespace)
+                                    .font(.largeTitle.weight(.bold))
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                            } else {
+                                Spacer()
                             }
-                        }, label: {
-                            Image(systemName: "x.circle.fill")
-                        })
+                            Button(action: {
+                                withAnimation(.spring(dampingFraction: 0.5, blendDuration: 1.0)) {
+                                    isShowQuestionView.toggle()
+                                    isShowNavigationBar.toggle()
+                                    if !isShowTitle {
+                                        isShowTitle.toggle()
+                                    }
+                                }
+                            }, label: {
+                                Image(systemName: "x.circle.fill")
+                            })
+                        }
+                        QuestionView(isShowTitle: $isShowTitle)
+                            .matchedGeometryEffect(id: "questionView", in: namespace)
+                            .opacity(isShowQuestionView ? 1 : 0)
                     }
-                    QuestionView(isShowTitle: $isShowTitle)
-                        .matchedGeometryEffect(id: "questionView", in: namespace)
-                        .opacity(isShowQuestionView ? 1 : 0)
-                }
-                .padding(20)
-                .background(
-                    Image("BackgroundImage")
-                        .resizable()
-                        .matchedGeometryEffect(id: "background", in: namespace)
-                        .cornerRadius(20).matchedGeometryEffect(id: "radius", in: namespace)
-                )
-                .foregroundStyle(.white)
-                .padding(20)
-            } else {
-                VStack {
-                    Text("神への質問")
-                        .matchedGeometryEffect(id: "Title", in: namespace)
-                        .font(.largeTitle.weight(.semibold))
-                        .frame(maxWidth: .infinity, minHeight: 250, alignment: .center)
-                    EmptyView()
-                        .matchedGeometryEffect(id: "questionView", in: namespace)
-                }
-                .padding(20)
-                .background(
-                    Image("BackgroundImage")
-                        .resizable()
-                        .matchedGeometryEffect(id: "background", in: namespace)
-                        .cornerRadius(20).matchedGeometryEffect(id: "radius", in: namespace)
-                )
-                .foregroundStyle(.white)
-                .padding(20)
-                .onTapGesture {
-                    withAnimation {
-                        isShowQuestionView.toggle()
-                        isShowNavigationBar.toggle()
+                    .padding(20)
+                    .background(
+                        Image("BackgroundImage")
+                            .resizable()
+                            .matchedGeometryEffect(id: "background", in: namespace)
+                            .cornerRadius(20).matchedGeometryEffect(id: "radius", in: namespace)
+                    )
+                    .foregroundStyle(.white)
+                    .padding(20)
+                } else {
+                    VStack {
+                        Text("神への質問")
+                            .matchedGeometryEffect(id: "Title", in: namespace)
+                            .font(.largeTitle.weight(.semibold))
+                            .frame(maxWidth: .infinity, minHeight: 250, alignment: .center)
+                        EmptyView()
+                            .matchedGeometryEffect(id: "questionView", in: namespace)
+                    }
+                    .background(
+                        Image("BackgroundImage")
+                            .resizable()
+                            .matchedGeometryEffect(id: "background", in: namespace)
+                            .cornerRadius(20).matchedGeometryEffect(id: "radius", in: namespace)
+                    )
+                    .foregroundStyle(.white)
+                    .padding(20)
+                    .onTapGesture {
+                        withAnimation(.spring(dampingFraction: 0.5, blendDuration: 1.0)) {
+                            isShowQuestionView.toggle()
+                            isShowNavigationBar.toggle()
+                        }
                     }
                 }
             }
+            ADBannerViewControllerRepresentable()
+                .frame(height: 50)
+                .padding(EdgeInsets(top: 10, leading: 10, bottom: 50, trailing: 10))
         }
-
     }
 }
 

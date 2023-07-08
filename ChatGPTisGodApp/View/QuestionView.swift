@@ -34,9 +34,13 @@ struct QuestionView: View {
                             Color.accentColor(colorScheme)
                         )
                         .background(
-                            Color.backgroundColor(colorScheme)
+                            Color.componentBackgroundColor(colorScheme)
                         )
                         .cornerRadius(30)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 30)
+                                .stroke(.white, lineWidth: 3)
+                        )
                         .toast(message: "質問を入力してください", isShowing: $isShowToast, duration: Toast.short)
                     Spacer()
                 }
@@ -54,13 +58,17 @@ struct QuestionView: View {
                 }, label: {
                     Text("質問を献上")
                         .font(.title.weight(.bold))
+                        .foregroundColor(Color.accentColor(colorScheme))
                 })
                 .frame(width: 250)
                 .background(
-                    Color.backgroundColor(colorScheme)
+                    Color.componentBackgroundColor(colorScheme)
                 )
-                .cornerRadius(10)
-                .border(.white)
+                .cornerRadius(16)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(.white, lineWidth: 3)
+                )
             }
             .padding(20)
         } else {

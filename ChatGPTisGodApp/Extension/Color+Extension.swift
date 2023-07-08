@@ -15,11 +15,18 @@ extension Color {
             return Color("accent-color")
         }
     }
-    static let backgroundColor: (ColorScheme) -> Color = { colorScheme in
+    static let componentBackgroundColor: (ColorScheme) -> Color = { colorScheme in
         if colorScheme == .dark {
             return .black
         } else {
             return secondaryColor
+        }
+    }
+    static let backgroundColor: (ColorScheme) -> Color = { colorScheme in
+        if colorScheme == .dark {
+            return black
+        } else {
+            return primaryColor
         }
     }
     static let primaryColor = Color("primary-color")

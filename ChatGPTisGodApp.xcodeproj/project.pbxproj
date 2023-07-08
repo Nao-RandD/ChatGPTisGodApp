@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7F27D4D529E6D1F000C2B9A9 /* ChatScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F27D4D429E6D1F000C2B9A9 /* ChatScript.swift */; };
+		7F90ACEF2A56E82100E3CFFE /* ADBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F90ACEE2A56E82100E3CFFE /* ADBannerView.swift */; };
+		7FC00EE02A56E69600B5AEB5 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 7FC00EDF2A56E69600B5AEB5 /* GoogleMobileAds */; };
 		7FC1DEF429B39CBB00791AA6 /* ChatGPTisGodAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DEF329B39CBB00791AA6 /* ChatGPTisGodAppApp.swift */; };
 		7FC1DEF629B39CBB00791AA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DEF529B39CBB00791AA6 /* ContentView.swift */; };
 		7FC1DEF829B39CBD00791AA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FC1DEF729B39CBD00791AA6 /* Assets.xcassets */; };
@@ -48,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		7F27D4D429E6D1F000C2B9A9 /* ChatScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScript.swift; sourceTree = "<group>"; };
+		7F90ACEE2A56E82100E3CFFE /* ADBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBannerView.swift; sourceTree = "<group>"; };
 		7FC1DEF029B39CBB00791AA6 /* ChatGPTisGodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPTisGodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FC1DEF329B39CBB00791AA6 /* ChatGPTisGodAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTisGodAppApp.swift; sourceTree = "<group>"; };
 		7FC1DEF529B39CBB00791AA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FC00EE02A56E69600B5AEB5 /* GoogleMobileAds in Frameworks */,
 				7FC1DF3829BDA6F900791AA6 /* Lottie in Frameworks */,
 				7FC1DF9829C947EA00791AA6 /* AppInfoList in Frameworks */,
 			);
@@ -193,6 +197,7 @@
 				7FC1DF4829C72AF900791AA6 /* VideoPlayerUIView.swift */,
 				7FC1DF9929C9492E00791AA6 /* AppInfoView.swift */,
 				7FC1DF9B29C95EAF00791AA6 /* Toast.swift */,
+				7F90ACEE2A56E82100E3CFFE /* ADBannerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 			packageProductDependencies = (
 				7FC1DF3729BDA6F900791AA6 /* Lottie */,
 				7FC1DF9729C947EA00791AA6 /* AppInfoList */,
+				7FC00EDF2A56E69600B5AEB5 /* GoogleMobileAds */,
 			);
 			productName = ChatGPTisGodApp;
 			productReference = 7FC1DEF029B39CBB00791AA6 /* ChatGPTisGodApp.app */;
@@ -298,6 +304,7 @@
 			packageReferences = (
 				7FC1DF3629BDA6F900791AA6 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				7FC1DF9629C947EA00791AA6 /* XCRemoteSwiftPackageReference "AppInfoList" */,
+				7FC00EDE2A56E69600B5AEB5 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = 7FC1DEF129B39CBB00791AA6 /* Products */;
 			projectDirPath = "";
@@ -334,6 +341,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		7FC00EDD2A55A0AB00B5AEB5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -351,6 +359,7 @@
 		};
 		7FC1DF9529C9447200791AA6 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -380,6 +389,7 @@
 				7FC1DF4729C6ACD000791AA6 /* MatchedView.swift in Sources */,
 				7FC1DF2F29B43D7400791AA6 /* APIClient.swift in Sources */,
 				7FC1DF2D29B437AD00791AA6 /* OpenAICompletion.swift in Sources */,
+				7F90ACEF2A56E82100E3CFFE /* ADBannerView.swift in Sources */,
 				7FC1DF9C29C95EAF00791AA6 /* Toast.swift in Sources */,
 				7FC1DF4329BE065E00791AA6 /* String+Extension.swift in Sources */,
 				7FC1DEF429B39CBB00791AA6 /* ChatGPTisGodAppApp.swift in Sources */,
@@ -468,6 +478,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -521,6 +532,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -669,6 +681,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7FC00EDE2A56E69600B5AEB5 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 		7FC1DF3629BDA6F900791AA6 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -688,6 +708,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7FC00EDF2A56E69600B5AEB5 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FC00EDE2A56E69600B5AEB5 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
 		7FC1DF3729BDA6F900791AA6 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7FC1DF3629BDA6F900791AA6 /* XCRemoteSwiftPackageReference "lottie-ios" */;
