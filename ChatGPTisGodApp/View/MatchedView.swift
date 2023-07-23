@@ -10,6 +10,7 @@ import SwiftUI
 struct MatchedView: View {
     @State var isShowQuestionView: Bool = false
     @State var isShowTitle = true
+    @State var isShowAnswerView = false
     @Namespace var namespace
     @Binding var isShowNavigationBar: Bool
 
@@ -34,12 +35,15 @@ struct MatchedView: View {
                                     if !isShowTitle {
                                         isShowTitle.toggle()
                                     }
+                                    if isShowAnswerView {
+                                        isShowAnswerView.toggle()
+                                    }
                                 }
                             }, label: {
                                 Image(systemName: "x.circle.fill")
                             })
                         }
-                        QuestionView(isShowTitle: $isShowTitle)
+                        QuestionView(isShowTitle: $isShowTitle, isShowAnswerView: $isShowAnswerView)
                             .matchedGeometryEffect(id: "questionView", in: namespace)
                             .opacity(isShowQuestionView ? 1 : 0)
                     }

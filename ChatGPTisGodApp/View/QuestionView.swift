@@ -9,14 +9,14 @@ import SwiftUI
 
 struct QuestionView: View {
     @State var userInputText = ""
-    @State var isAnswerViewShow = false
     @State var isShowToast = false
     @Binding var isShowTitle: Bool
+    @Binding var isShowAnswerView: Bool
     @FocusState var isFocusTextField
     @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
-        if !isAnswerViewShow {
+        if !isShowAnswerView {
             VStack {
                 VStack {
                     Text("あなたの悩みは何ですか？")
@@ -50,8 +50,9 @@ struct QuestionView: View {
                 Spacer()
                 Button(action: {
                     if !userInputText.isEmpty {
+                        userInputText = ""
                         isShowTitle.toggle()
-                        isAnswerViewShow.toggle()
+                        isShowAnswerView.toggle()
                     } else {
                         isShowToast = true
                     }
@@ -80,6 +81,6 @@ struct QuestionView: View {
 struct QuestionView_Previews: PreviewProvider {
     @Namespace static var namespace
     static var previews: some View {
-        QuestionView(isShowTitle: .constant(false))
+        QuestionView(isShowTitle: .constant(false), isShowAnswerView: .constant(false))
     }
 }
