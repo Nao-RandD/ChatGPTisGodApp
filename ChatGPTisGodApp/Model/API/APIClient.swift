@@ -11,6 +11,7 @@ enum APIError: Error {
     case responseError
     case decordError
     case urlSessionError
+    case apiBusyError
     case other
 }
 
@@ -30,8 +31,12 @@ final class APIClient {
 
         do {
             let (data, response) = try await URLSession.shared.data(for: urlRequest)
-            guard let response = response as? HTTPURLResponse,
-                    response.statusCode == 200 else { return .failure(.responseError) }
+            if let res = response as? HTTPURLResponse,
+               res.statusCode != 200 {
+                // 429のステータスコードの場合にはAPIが使用料制限にかかっている
+                if res.statusCode == 429 { return .failure(.apiBusyError) }
+                return .failure(.responseError)
+            }
 
             guard let responseData = try? decoder.decode(V.self, from: data) else { return .failure(.decordError) }
             return .success(responseData)
