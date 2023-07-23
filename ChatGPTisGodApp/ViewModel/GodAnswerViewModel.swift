@@ -10,7 +10,8 @@ import Combine
 
 enum LoadingState {
     case loading
-    case complete(Result<String, Error>)
+    case complete(String)
+    case failure(APIError)
 }
 
 final class GodAnswerViewModel: ObservableObject {
@@ -54,16 +55,16 @@ final class GodAnswerViewModel: ObservableObject {
                     answer = answer.removeBefore(target: removeText)
                     let validate: Set<Character> = ["\"", "\n"]
                     answer.removeAll(where: { validate.contains($0) })
-                    self.state = .complete(.success(answer))
+                    self.state = .complete(answer)
                 }
             case .failure(let error):
                 print(print("🍻：\(error)"))
                 Task { @MainActor in
-                    self.state = .complete(.failure(error))
+                    self.state = .failure(error)
                 }
             }
         } catch {
-            state = .complete(.failure(error))
+            state = .failure(.other)
         }
     }
 }

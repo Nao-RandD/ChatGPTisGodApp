@@ -5,7 +5,6 @@
 //  Created by Nao RandD on 2023/07/06.
 //
 
-import Foundation
 import GoogleMobileAds
 import SwiftUI
 import UIKit
@@ -24,6 +23,7 @@ struct ADBannerViewControllerRepresentable: UIViewControllerRepresentable {
 
 class ADBannerViewController: UIViewController {
     override func viewDidLoad() {
+        super.viewDidLoad()
         let bannerView = GADBannerView(adSize: GADAdSizeBanner)
         bannerView.adUnitID = Info.adUnitID
         bannerView.rootViewController = self

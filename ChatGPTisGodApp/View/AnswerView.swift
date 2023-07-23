@@ -22,15 +22,23 @@ struct AnswerView: View {
             switch viewModel.state {
             case .loading:
                 LottieView(resourceType: .loading)
-            case .complete(let result):
-                switch result {
-                case .success(let answer):
-                    Text(answer)
+            case .failure(let error):
+                switch error {
+                case .apiBusyError:
+                    Text("神は人類と今月分の\n相談を終えました\n\n月の始めの相談を\n強くオススメします")
                         .font(.title2.weight(.bold))
                         .frame(height: 300)
-                case .failure(_):
+                        .multilineTextAlignment(.center)
+                    Text("ほんとゴメンナサイ...")
+                case .responseError, .decordError, .urlSessionError, .other:
                     Text("神との通信に失敗しました")
+                        .font(.title3.weight(.bold))
+                        .frame(height: 300)
                 }
+            case .complete(let answer):
+                Text(answer)
+                    .font(.title2.weight(.bold))
+                    .frame(height: 300)
             }
         }
         .onAppear {
