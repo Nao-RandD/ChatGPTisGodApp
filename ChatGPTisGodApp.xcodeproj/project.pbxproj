@@ -36,6 +36,11 @@
 		7FC1DF9A29C9492E00791AA6 /* AppInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF9929C9492E00791AA6 /* AppInfoView.swift */; };
 		7FC1DF9C29C95EAF00791AA6 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF9B29C95EAF00791AA6 /* Toast.swift */; };
 		7FC1DF9E29C9796B00791AA6 /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FC1DF9D29C9796B00791AA6 /* splash.json */; };
+		7FD0AABA2A88B3B300BE1D68 /* ChatGPTisGodAppClipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD0AAB92A88B3B300BE1D68 /* ChatGPTisGodAppClipApp.swift */; };
+		7FD0AABC2A88B3B300BE1D68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD0AABB2A88B3B300BE1D68 /* ContentView.swift */; };
+		7FD0AABE2A88B3B400BE1D68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FD0AABD2A88B3B400BE1D68 /* Assets.xcassets */; };
+		7FD0AAC12A88B3B400BE1D68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FD0AAC02A88B3B400BE1D68 /* Preview Assets.xcassets */; };
+		7FD0AAC62A88B3B400BE1D68 /* ChatGPTisGodAppClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 7FD0AAB72A88B3B300BE1D68 /* ChatGPTisGodAppClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +51,28 @@
 			remoteGlobalIDString = 7FC1DEEF29B39CBB00791AA6;
 			remoteInfo = ChatGPTisGodApp;
 		};
+		7FD0AAC42A88B3B400BE1D68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7FC1DEE829B39CBB00791AA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7FD0AAB62A88B3B300BE1D68;
+			remoteInfo = ChatGPTisGodAppClip;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7FD0AAAF2A88643F00BE1D68 /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+				7FD0AAC62A88B3B400BE1D68 /* ChatGPTisGodAppClip.app in Embed App Clips */,
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7F27D4D429E6D1F000C2B9A9 /* ChatScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScript.swift; sourceTree = "<group>"; };
@@ -80,6 +106,13 @@
 		7FC1DF9929C9492E00791AA6 /* AppInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoView.swift; sourceTree = "<group>"; };
 		7FC1DF9B29C95EAF00791AA6 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		7FC1DF9D29C9796B00791AA6 /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash.json; sourceTree = "<group>"; };
+		7FD0AAB72A88B3B300BE1D68 /* ChatGPTisGodAppClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPTisGodAppClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FD0AAB92A88B3B300BE1D68 /* ChatGPTisGodAppClipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTisGodAppClipApp.swift; sourceTree = "<group>"; };
+		7FD0AABB2A88B3B300BE1D68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7FD0AABD2A88B3B400BE1D68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7FD0AAC02A88B3B400BE1D68 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7FD0AAC22A88B3B400BE1D68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FD0AAC32A88B3B400BE1D68 /* ChatGPTisGodAppClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChatGPTisGodAppClip.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +133,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7FD0AAB42A88B3B300BE1D68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -110,6 +150,7 @@
 				7FC1DEF229B39CBB00791AA6 /* ChatGPTisGodApp */,
 				7FC1DF0329B39CBD00791AA6 /* ChatGPTisGodAppTests */,
 				7FC1DF0D29B39CBD00791AA6 /* ChatGPTisGodAppUITests */,
+				7FD0AAB82A88B3B300BE1D68 /* ChatGPTisGodAppClip */,
 				7FC1DEF129B39CBB00791AA6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,6 +160,7 @@
 			children = (
 				7FC1DEF029B39CBB00791AA6 /* ChatGPTisGodApp.app */,
 				7FC1DF0029B39CBD00791AA6 /* ChatGPTisGodAppTests.xctest */,
+				7FD0AAB72A88B3B300BE1D68 /* ChatGPTisGodAppClip.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,6 +270,27 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		7FD0AAB82A88B3B300BE1D68 /* ChatGPTisGodAppClip */ = {
+			isa = PBXGroup;
+			children = (
+				7FD0AAB92A88B3B300BE1D68 /* ChatGPTisGodAppClipApp.swift */,
+				7FD0AABB2A88B3B300BE1D68 /* ContentView.swift */,
+				7FD0AABD2A88B3B400BE1D68 /* Assets.xcassets */,
+				7FD0AAC22A88B3B400BE1D68 /* Info.plist */,
+				7FD0AAC32A88B3B400BE1D68 /* ChatGPTisGodAppClip.entitlements */,
+				7FD0AABF2A88B3B400BE1D68 /* Preview Content */,
+			);
+			path = ChatGPTisGodAppClip;
+			sourceTree = "<group>";
+		};
+		7FD0AABF2A88B3B400BE1D68 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7FD0AAC02A88B3B400BE1D68 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,10 +303,12 @@
 				7FC1DEEE29B39CBB00791AA6 /* Resources */,
 				7FC1DF9529C9447200791AA6 /* ShellScript */,
 				7FC00EDD2A55A0AB00B5AEB5 /* ShellScript */,
+				7FD0AAAF2A88643F00BE1D68 /* Embed App Clips */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7FD0AAC52A88B3B400BE1D68 /* PBXTargetDependency */,
 			);
 			name = ChatGPTisGodApp;
 			packageProductDependencies = (
@@ -273,6 +338,23 @@
 			productReference = 7FC1DF0029B39CBD00791AA6 /* ChatGPTisGodAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		7FD0AAB62A88B3B300BE1D68 /* ChatGPTisGodAppClip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FD0AAC72A88B3B400BE1D68 /* Build configuration list for PBXNativeTarget "ChatGPTisGodAppClip" */;
+			buildPhases = (
+				7FD0AAB32A88B3B300BE1D68 /* Sources */,
+				7FD0AAB42A88B3B300BE1D68 /* Frameworks */,
+				7FD0AAB52A88B3B300BE1D68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChatGPTisGodAppClip;
+			productName = ChatGPTisGodAppClip;
+			productReference = 7FD0AAB72A88B3B300BE1D68 /* ChatGPTisGodAppClip.app */;
+			productType = "com.apple.product-type.application.on-demand-install-capable";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -280,7 +362,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1420;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					7FC1DEEF29B39CBB00791AA6 = {
@@ -289,6 +371,9 @@
 					7FC1DEFF29B39CBD00791AA6 = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 7FC1DEEF29B39CBB00791AA6;
+					};
+					7FD0AAB62A88B3B300BE1D68 = {
+						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
@@ -312,6 +397,7 @@
 			targets = (
 				7FC1DEEF29B39CBB00791AA6 /* ChatGPTisGodApp */,
 				7FC1DEFF29B39CBD00791AA6 /* ChatGPTisGodAppTests */,
+				7FD0AAB62A88B3B300BE1D68 /* ChatGPTisGodAppClip */,
 			);
 		};
 /* End PBXProject section */
@@ -333,6 +419,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FD0AAB52A88B3B300BE1D68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FD0AAC12A88B3B400BE1D68 /* Preview Assets.xcassets in Resources */,
+				7FD0AABE2A88B3B400BE1D68 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +508,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7FD0AAB32A88B3B300BE1D68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FD0AABC2A88B3B300BE1D68 /* ContentView.swift in Sources */,
+				7FD0AABA2A88B3B300BE1D68 /* ChatGPTisGodAppClipApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -420,6 +524,11 @@
 			isa = PBXTargetDependency;
 			target = 7FC1DEEF29B39CBB00791AA6 /* ChatGPTisGodApp */;
 			targetProxy = 7FC1DF0129B39CBD00791AA6 /* PBXContainerItemProxy */;
+		};
+		7FD0AAC52A88B3B400BE1D68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7FD0AAB62A88B3B300BE1D68 /* ChatGPTisGodAppClip */;
+			targetProxy = 7FD0AAC42A88B3B400BE1D68 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -543,6 +652,7 @@
 		7FC1DF1529B39CBD00791AA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -577,6 +687,7 @@
 		7FC1DF1629B39CBD00791AA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -648,6 +759,72 @@
 			};
 			name = Release;
 		};
+		7FD0AAC82A88B3B400BE1D68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ChatGPTisGodAppClip/ChatGPTisGodAppClip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ChatGPTisGodAppClip/Preview Content\"";
+				DEVELOPMENT_TEAM = 44SQBVTPVY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChatGPTisGodAppClip/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ChatGPTisGodApp;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naorandd.ChatGPTisGodApp.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7FD0AAC92A88B3B400BE1D68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ChatGPTisGodAppClip/ChatGPTisGodAppClip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ChatGPTisGodAppClip/Preview Content\"";
+				DEVELOPMENT_TEAM = 44SQBVTPVY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChatGPTisGodAppClip/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ChatGPTisGodApp;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naorandd.ChatGPTisGodApp.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -674,6 +851,15 @@
 			buildConfigurations = (
 				7FC1DF1829B39CBD00791AA6 /* Debug */,
 				7FC1DF1929B39CBD00791AA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FD0AAC72A88B3B400BE1D68 /* Build configuration list for PBXNativeTarget "ChatGPTisGodAppClip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FD0AAC82A88B3B400BE1D68 /* Debug */,
+				7FD0AAC92A88B3B400BE1D68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
