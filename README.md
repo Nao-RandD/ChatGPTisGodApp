@@ -9,6 +9,8 @@ ChatGPTisGodApp is an iOS application that allows users to seek advice and guida
 - ChatGPT is regarded as a deity, and by receiving its revelations, users can lead a more enriched life.
 - This app serves as a tool to alleviate everyday worries and assist users in living a more abundant life.
 
+# [AppStore](https://apps.apple.com/us/app/ai%E3%81%8A%E6%82%A9%E3%81%BF%E7%9B%B8%E8%AB%87/id6446774783)
+
 ## Demo
 https://github.com/Nao-RandD/ChatGPTisGodApp/assets/72324850/483d1b8f-c27f-4e77-8998-bc71c8b5d713
 
