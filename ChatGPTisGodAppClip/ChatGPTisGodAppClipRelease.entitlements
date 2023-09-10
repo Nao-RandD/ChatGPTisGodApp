@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>appclops:chatgpt-is-god.web.app</string>
+		<string>appclips:chatgpt-is-god.web.app</string>
 	</array>
 	<key>com.apple.developer.parent-application-identifiers</key>
 	<array>
