@@ -1,8 +1,8 @@
 //
 //  MatchedView.swift
-//  ChatGPTisGodApp
+//  ChatGPTisGodAppClip
 //
-//  Created by Nao RandD on 2023/03/19.
+//  Created by Nao RandD on 2023/09/10.
 //
 
 import SwiftUI
@@ -13,21 +13,9 @@ struct MatchedView: View {
     @State var isShowAnswerView = false
     @State var togglePreview = false
     @Namespace var namespace
-    @Binding var isShowNavigationBar: Bool
 
     var body: some View {
         VStack {
-//            let appClipURL = URL(
-//                string: "https://chatgpt-is-god.web.app"
-//            )!
-//
-//            Link("Go to App Clip", destination: appClipURL)
-//            let appClipURL = URL(
-//                            string: "https://chatgpt-is-god.web.app"
-//                        )!
-//            URLPreview(previewURL: appClipURL, togglePreview: $togglePreview)
-//                            .aspectRatio(contentMode: .fit)
-//                            .padding()
             ZStack {
                 if isShowQuestionView {
                     VStack {
@@ -43,7 +31,6 @@ struct MatchedView: View {
                             Button(action: {
                                 withAnimation(.spring(dampingFraction: 0.5, blendDuration: 1.0)) {
                                     isShowQuestionView.toggle()
-                                    isShowNavigationBar.toggle()
                                     if !isShowTitle {
                                         isShowTitle.toggle()
                                     }
@@ -88,20 +75,16 @@ struct MatchedView: View {
                     .onTapGesture {
                         withAnimation(.spring(dampingFraction: 0.5, blendDuration: 1.0)) {
                             isShowQuestionView.toggle()
-                            isShowNavigationBar.toggle()
                         }
                     }
                 }
             }
-            ADBannerViewControllerRepresentable()
-                .frame(height: 50)
-                .padding(EdgeInsets(top: 10, leading: 10, bottom: 50, trailing: 10))
         }
     }
 }
 
 struct MatchedView_Previews: PreviewProvider {
     static var previews: some View {
-        MatchedView(isShowNavigationBar: .constant(false))
+        MatchedView()
     }
 }
