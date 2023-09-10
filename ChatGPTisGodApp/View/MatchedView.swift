@@ -11,11 +11,23 @@ struct MatchedView: View {
     @State var isShowQuestionView: Bool = false
     @State var isShowTitle = true
     @State var isShowAnswerView = false
+    @State var togglePreview = false
     @Namespace var namespace
     @Binding var isShowNavigationBar: Bool
 
     var body: some View {
         VStack {
+//            let appClipURL = URL(
+//                string: "https://chatgpt-is-god.web.app"
+//            )!
+//
+//            Link("Go to App Clip", destination: appClipURL)
+//            let appClipURL = URL(
+//                            string: "https://chatgpt-is-god.web.app"
+//                        )!
+//            URLPreview(previewURL: appClipURL, togglePreview: $togglePreview)
+//                            .aspectRatio(contentMode: .fit)
+//                            .padding()
             ZStack {
                 if isShowQuestionView {
                     VStack {

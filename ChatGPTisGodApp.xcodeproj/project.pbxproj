@@ -8,7 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		7F27D4D529E6D1F000C2B9A9 /* ChatScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F27D4D429E6D1F000C2B9A9 /* ChatScript.swift */; };
+		7F50A92A2AAD9DE40099DC16 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7F50A9292AAD9DE40099DC16 /* Lottie */; };
 		7F90ACEF2A56E82100E3CFFE /* ADBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F90ACEE2A56E82100E3CFFE /* ADBannerView.swift */; };
+		7F9C7AE52AAD915200CD4329 /* URLPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C7AE42AAD915200CD4329 /* URLPreview.swift */; };
+		7FA946622AAD9AD5002B33FA /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF3229BD977200791AA6 /* Color+Extension.swift */; };
+		7FA946642AAD9BC8002B33FA /* MatchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA946632AAD9BC8002B33FA /* MatchedView.swift */; };
+		7FA946652AAD9C16002B33FA /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF4429BE0A0E00791AA6 /* QuestionView.swift */; };
+		7FA946662AAD9C56002B33FA /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF9B29C95EAF00791AA6 /* Toast.swift */; };
+		7FA946672AAD9C61002B33FA /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF3D29BDC66100791AA6 /* AnswerView.swift */; };
+		7FA946682AAD9C6E002B33FA /* GodAnswerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF3F29BDCF5000791AA6 /* GodAnswerViewModel.swift */; };
+		7FA946692AAD9C73002B33FA /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF3929BDAAA000791AA6 /* LottieView.swift */; };
+		7FA9466A2AAD9C81002B33FA /* OpenAICompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF2C29B437AD00791AA6 /* OpenAICompletion.swift */; };
+		7FA9466B2AAD9C84002B33FA /* ChatScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F27D4D429E6D1F000C2B9A9 /* ChatScript.swift */; };
+		7FA9466C2AAD9C92002B33FA /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF2829B4345300791AA6 /* BaseRequest.swift */; };
+		7FA9466D2AAD9C92002B33FA /* OpenAIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF2A29B4366B00791AA6 /* OpenAIRequest.swift */; };
+		7FA9466E2AAD9C92002B33FA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF2E29B43D7400791AA6 /* APIClient.swift */; };
+		7FA9466F2AAD9CA9002B33FA /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF2229B3A34900791AA6 /* Info.swift */; };
+		7FA946702AAD9CCC002B33FA /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DF4229BE065E00791AA6 /* String+Extension.swift */; };
 		7FC00EE02A56E69600B5AEB5 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 7FC00EDF2A56E69600B5AEB5 /* GoogleMobileAds */; };
 		7FC1DEF429B39CBB00791AA6 /* ChatGPTisGodAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DEF329B39CBB00791AA6 /* ChatGPTisGodAppApp.swift */; };
 		7FC1DEF629B39CBB00791AA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC1DEF529B39CBB00791AA6 /* ContentView.swift */; };
@@ -41,6 +57,7 @@
 		7FD0AABE2A88B3B400BE1D68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FD0AABD2A88B3B400BE1D68 /* Assets.xcassets */; };
 		7FD0AAC12A88B3B400BE1D68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FD0AAC02A88B3B400BE1D68 /* Preview Assets.xcassets */; };
 		7FD0AAC62A88B3B400BE1D68 /* ChatGPTisGodAppClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 7FD0AAB72A88B3B300BE1D68 /* ChatGPTisGodAppClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7FEC80D52AADA407000D3E0C /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FC1DF3B29BDAC8000791AA6 /* loading.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +93,10 @@
 
 /* Begin PBXFileReference section */
 		7F27D4D429E6D1F000C2B9A9 /* ChatScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScript.swift; sourceTree = "<group>"; };
+		7F70309C2AAD81230052C31B /* ChatGPTisGodAppClipRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChatGPTisGodAppClipRelease.entitlements; sourceTree = "<group>"; };
 		7F90ACEE2A56E82100E3CFFE /* ADBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBannerView.swift; sourceTree = "<group>"; };
+		7F9C7AE42AAD915200CD4329 /* URLPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPreview.swift; sourceTree = "<group>"; };
+		7FA946632AAD9BC8002B33FA /* MatchedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedView.swift; sourceTree = "<group>"; };
 		7FC1DEF029B39CBB00791AA6 /* ChatGPTisGodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPTisGodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FC1DEF329B39CBB00791AA6 /* ChatGPTisGodAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTisGodAppApp.swift; sourceTree = "<group>"; };
 		7FC1DEF529B39CBB00791AA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -137,12 +157,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F50A92A2AAD9DE40099DC16 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F50A9282AAD9DE40099DC16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7FC1DEE729B39CBB00791AA6 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +180,7 @@
 				7FC1DF0D29B39CBD00791AA6 /* ChatGPTisGodAppUITests */,
 				7FD0AAB82A88B3B300BE1D68 /* ChatGPTisGodAppClip */,
 				7FC1DEF129B39CBB00791AA6 /* Products */,
+				7F50A9282AAD9DE40099DC16 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -240,6 +269,7 @@
 				7FC1DF9929C9492E00791AA6 /* AppInfoView.swift */,
 				7FC1DF9B29C95EAF00791AA6 /* Toast.swift */,
 				7F90ACEE2A56E82100E3CFFE /* ADBannerView.swift */,
+				7F9C7AE42AAD915200CD4329 /* URLPreview.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -273,8 +303,10 @@
 		7FD0AAB82A88B3B300BE1D68 /* ChatGPTisGodAppClip */ = {
 			isa = PBXGroup;
 			children = (
+				7F70309C2AAD81230052C31B /* ChatGPTisGodAppClipRelease.entitlements */,
 				7FD0AAB92A88B3B300BE1D68 /* ChatGPTisGodAppClipApp.swift */,
 				7FD0AABB2A88B3B300BE1D68 /* ContentView.swift */,
+				7FA946632AAD9BC8002B33FA /* MatchedView.swift */,
 				7FD0AABD2A88B3B400BE1D68 /* Assets.xcassets */,
 				7FD0AAC22A88B3B400BE1D68 /* Info.plist */,
 				7FD0AAC32A88B3B400BE1D68 /* ChatGPTisGodAppClip.entitlements */,
@@ -351,6 +383,9 @@
 			dependencies = (
 			);
 			name = ChatGPTisGodAppClip;
+			packageProductDependencies = (
+				7F50A9292AAD9DE40099DC16 /* Lottie */,
+			);
 			productName = ChatGPTisGodAppClip;
 			productReference = 7FD0AAB72A88B3B300BE1D68 /* ChatGPTisGodAppClip.app */;
 			productType = "com.apple.product-type.application.on-demand-install-capable";
@@ -428,6 +463,7 @@
 			files = (
 				7FD0AAC12A88B3B400BE1D68 /* Preview Assets.xcassets in Resources */,
 				7FD0AABE2A88B3B400BE1D68 /* Assets.xcassets in Resources */,
+				7FEC80D52AADA407000D3E0C /* loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +526,7 @@
 				7FC1DEF429B39CBB00791AA6 /* ChatGPTisGodAppApp.swift in Sources */,
 				7FC1DF3E29BDC66100791AA6 /* AnswerView.swift in Sources */,
 				7F27D4D529E6D1F000C2B9A9 /* ChatScript.swift in Sources */,
+				7F9C7AE52AAD915200CD4329 /* URLPreview.swift in Sources */,
 				7FC1DF3A29BDAAA000791AA6 /* LottieView.swift in Sources */,
 				7FC1DF4529BE0A0E00791AA6 /* QuestionView.swift in Sources */,
 				7FC1DF4029BDCF5000791AA6 /* GodAnswerViewModel.swift in Sources */,
@@ -512,8 +549,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA946702AAD9CCC002B33FA /* String+Extension.swift in Sources */,
+				7FA946652AAD9C16002B33FA /* QuestionView.swift in Sources */,
+				7FA9466E2AAD9C92002B33FA /* APIClient.swift in Sources */,
+				7FA9466B2AAD9C84002B33FA /* ChatScript.swift in Sources */,
+				7FA9466F2AAD9CA9002B33FA /* Info.swift in Sources */,
+				7FA946682AAD9C6E002B33FA /* GodAnswerViewModel.swift in Sources */,
+				7FA9466D2AAD9C92002B33FA /* OpenAIRequest.swift in Sources */,
+				7FA946692AAD9C73002B33FA /* LottieView.swift in Sources */,
+				7FA946662AAD9C56002B33FA /* Toast.swift in Sources */,
+				7FA946672AAD9C61002B33FA /* AnswerView.swift in Sources */,
 				7FD0AABC2A88B3B300BE1D68 /* ContentView.swift in Sources */,
+				7FA946642AAD9BC8002B33FA /* MatchedView.swift in Sources */,
+				7FA9466C2AAD9C92002B33FA /* BaseRequest.swift in Sources */,
 				7FD0AABA2A88B3B300BE1D68 /* ChatGPTisGodAppClipApp.swift in Sources */,
+				7FA946622AAD9AD5002B33FA /* Color+Extension.swift in Sources */,
+				7FA9466A2AAD9C81002B33FA /* OpenAICompletion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,7 +707,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ChatGPTisGodApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 44SQBVTPVY;
 				ENABLE_PREVIEWS = YES;
@@ -672,7 +723,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.naorandd.ChatGPTisGodApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -691,7 +742,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ChatGPTisGodApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 44SQBVTPVY;
 				ENABLE_PREVIEWS = YES;
@@ -707,7 +758,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.naorandd.ChatGPTisGodApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -766,8 +817,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ChatGPTisGodAppClip/ChatGPTisGodAppClip.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ChatGPTisGodAppClip/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "ChatGPTisGodAppClip/Preview\\ Content";
 				DEVELOPMENT_TEAM = 44SQBVTPVY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -776,19 +827,22 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.naorandd.ChatGPTisGodApp.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -797,10 +851,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ChatGPTisGodAppClip/ChatGPTisGodAppClip.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ChatGPTisGodAppClip/ChatGPTisGodAppClipRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ChatGPTisGodAppClip/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "ChatGPTisGodAppClip/Preview\\ Content";
 				DEVELOPMENT_TEAM = 44SQBVTPVY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -809,19 +864,23 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.naorandd.ChatGPTisGodApp.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -894,6 +953,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7F50A9292AAD9DE40099DC16 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FC1DF3629BDA6F900791AA6 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		7FC00EDF2A56E69600B5AEB5 /* GoogleMobileAds */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7FC00EDE2A56E69600B5AEB5 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;

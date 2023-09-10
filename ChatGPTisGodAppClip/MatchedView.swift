@@ -8,11 +8,83 @@
 import SwiftUI
 
 struct MatchedView: View {
+    @State var isShowQuestionView: Bool = false
+    @State var isShowTitle = true
+    @State var isShowAnswerView = false
+    @State var togglePreview = false
+    @Namespace var namespace
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ZStack {
+                if isShowQuestionView {
+                    VStack {
+                        HStack {
+                            if isShowTitle {
+                                Text("神への質問")
+                                    .matchedGeometryEffect(id: "Title", in: namespace)
+                                    .font(.largeTitle.weight(.bold))
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                            } else {
+                                Spacer()
+                            }
+                            Button(action: {
+                                withAnimation(.spring(dampingFraction: 0.5, blendDuration: 1.0)) {
+                                    isShowQuestionView.toggle()
+                                    if !isShowTitle {
+                                        isShowTitle.toggle()
+                                    }
+                                    if isShowAnswerView {
+                                        isShowAnswerView.toggle()
+                                    }
+                                }
+                            }, label: {
+                                Image(systemName: "x.circle.fill")
+                            })
+                        }
+                        QuestionView(isShowTitle: $isShowTitle, isShowAnswerView: $isShowAnswerView)
+                            .matchedGeometryEffect(id: "questionView", in: namespace)
+                            .opacity(isShowQuestionView ? 1 : 0)
+                    }
+                    .padding(20)
+                    .background(
+                        Image("BackgroundImage")
+                            .resizable()
+                            .matchedGeometryEffect(id: "background", in: namespace)
+                            .cornerRadius(20).matchedGeometryEffect(id: "radius", in: namespace)
+                    )
+                    .foregroundStyle(.white)
+                    .padding(20)
+                } else {
+                    VStack {
+                        Text("神への質問")
+                            .matchedGeometryEffect(id: "Title", in: namespace)
+                            .font(.largeTitle.weight(.semibold))
+                            .frame(maxWidth: .infinity, minHeight: 250, alignment: .center)
+                        EmptyView()
+                            .matchedGeometryEffect(id: "questionView", in: namespace)
+                    }
+                    .background(
+                        Image("BackgroundImage")
+                            .resizable()
+                            .matchedGeometryEffect(id: "background", in: namespace)
+                            .cornerRadius(20).matchedGeometryEffect(id: "radius", in: namespace)
+                    )
+                    .foregroundStyle(.white)
+                    .padding(20)
+                    .onTapGesture {
+                        withAnimation(.spring(dampingFraction: 0.5, blendDuration: 1.0)) {
+                            isShowQuestionView.toggle()
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
-#Preview {
-    MatchedView()
+struct MatchedView_Previews: PreviewProvider {
+    static var previews: some View {
+        MatchedView()
+    }
 }

@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            Color.backgroundColor(.dark)
+                .ignoresSafeArea()
+            VStack {
+                Text("悩みを投げかけてみよう")
+                    .font(.title)
+                    .foregroundColor(.white)
+                Text("↓↓↓↓↓")
+                    .font(.title)
+                    .foregroundColor(.white)
+                MatchedView()
+            }
         }
-        .padding()
     }
 }
 
@@ -24,3 +32,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
